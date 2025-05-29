@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACTANOS</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="CSS.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="FOTOS.html">FOTOS</a></li>
+        <li><a href="VIDEOS.html">VIDEOS</a></li>
+        <li><a href="CONTACTANOS.html">CONTÁCTANOS</a></li>
+      </ul>
+      <div class="logo">
+  		<a href="HTML.html" style="text-decoration: none; color: inherit;">MMD</a>
+	  </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </nav>
+  </header>
+<section id="contacto" class="contacto-section">
+  <h2 class="titulo-contacto">CONTÁCTANOS</h2>
+
+  <form class="formulario-contacto" id="contactForm">
+    <label for="nombre">Nombre*</label>
+    <input type="text" id="nombre" placeholder="Tu nombre..." required>
+
+    <label for="correo">Correo electrónico*</label>
+    <input type="email" id="correo" placeholder="Tu correo electrónico..." required>
+
+    <label for="mensaje">Mensaje*</label>
+    <textarea id="mensaje" rows="6" placeholder="Tu mensaje..." required></textarea>
+
+    <button type="submit" class="btn-enviar">Enviar</button>
+  </form>
+</section>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Detiene el comportamiento por defecto
+    alert("¡Mensaje enviado correctamente!");
+    
+    // Limpia el formulario
+    this.reset();
+  });
+</script>
+
+</body>
+</html>

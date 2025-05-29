@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOTOS</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="CSS.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="FOTOS.html">FOTOS</a></li>
+        <li><a href="VIDEOS.html">VIDEOS</a></li>
+        <li><a href="CONTACTANOS.html">CONTACTÁNOS</a></li>
+      </ul>
+      <div class="logo">
+  		<a href="HTML.html" style="text-decoration: none; color: inherit;">MIDMAKER</a>
+	  </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </nav>
+  </header>
+<section id="fotos" class="galeria-fotos">
+  <h2 class="galeria-titulo">FOTOS</h2>
+  <div class="galeria-contenido">
+    <!-- Carrusel -->
+    <div class="galeria-carrusel">
+      <button class="galeria-flecha izquierda" onclick="cambiarImagen(-1)">&#10094;</button>
+      <div class="galeria-imagen">
+        <img id="imagenActual" src="imagenes/_DSC4635-Recuperado.png" alt="Foto galería">
+      </div>
+      <button class="galeria-flecha derecha" onclick="cambiarImagen(1)">&#10095;</button>
+    </div>
+
+    <!-- Texto -->
+    <div class="galeria-texto">
+      <h3>Explorando la esencia de la luz y la sombra</h3>
+      <p>
+        Un retrato con una estética vibrante y futurista<br>
+        que captura la profundidad de la mirada y la magia de la iluminación.<br>
+        Los tonos azul y violeta resaltan los contornos del rostro,<br>
+        creando un ambiente misterioso y cautivador.<br>
+        Esta imagen no solo es un retrato, sino una historia visual<br>
+        que invita a la introspección y la emoción.
+      </p>
+    </div>
+  </div>
+</section>
+<script>
+  const imagenes = [
+    "imagenes/_DSC4635-Recuperado.png",
+    "imagenes/_DSC4674-Recuperado.png",
+    "imagenes/_DSC4686-Recuperado.png",
+    "imagenes/_DSC4686-Recuperado.png",
+    "imagenes/_DSC4686-Recuperado.png"
+  ];
+
+  let indiceActual = 0;
+
+  function cambiarImagen(direccion) {
+    indiceActual = (indiceActual + direccion + imagenes.length) % imagenes.length;
+    document.getElementById("imagenActual").src = imagenes[indiceActual];
+  }
+</script>
+
+</body>
+</html>
